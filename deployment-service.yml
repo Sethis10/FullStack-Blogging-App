@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: bloggingapp
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: bloggingapp
-          image: sagar608/bloggingappz:latest # Updated image to private DockerHub image
+          image: sagar608/bloggingappv1:latest # Updated image to private DockerHub image
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
